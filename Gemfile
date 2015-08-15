@@ -58,3 +58,4 @@ group :development, :test do
   gem 'rails_admin'
 end
 
+gem 'pry-byebug', group: :development
