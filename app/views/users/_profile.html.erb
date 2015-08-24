@@ -10,25 +10,29 @@
       <li>
         <div class="status-label">FOLLOWING</div>
         <div class="status-value">
-          <%= user.following_users.count %>
+          <%# user.following_users.count %>
+          <%= user.following_relationships.count %>
         </div>
       </li>
       <li>
         <div class="status-label">FOLLOWERS</div>
         <div id="followers" class="status-value">
-          <%= user.followed_users.count %>
+          <%# user.followed_users.count %>
+          <%= user.followed_relationships.count %>
         </div>
       </li>
       <li>
         <div class="status-label">WANT</div>
         <div id="want_count" class="status-value">
-          <%= user.want_items.count %>
+          <%# user.want_items.count %>
+          <%= user.wants.count %>
         </div>
       </li>
       <li>
         <div class="status-label">HAVE</div>
         <div id="have_count" class="status-value">
-          <%= user.have_items.count %>
+          <%# user.have_items.count %>
+          <%= user.haves.count %>
         </div>
       </li>
     </ul>

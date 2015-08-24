@@ -14,7 +14,6 @@ class User < ActiveRecord::Base
 
   has_many :ownerships , foreign_key: "user_id", dependent: :destroy
   has_many :items, through: :ownerships
-
   has_many :haves, class_name: "Have", foreign_key: "user_id", dependent: :destroy
   has_many :have_items, through: :haves, source: :item
   has_many :wants, class_name: "Want", foreign_key: "user_id", dependent: :destroy
