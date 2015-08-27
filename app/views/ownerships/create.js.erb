@@ -7,13 +7,13 @@
 $('.btn-have,.btn-want').removeAttr('disabled');
 
 <%# 追加 %>
-<% if corrent_user %>
+<% if current_user %>
   var have_count = $("#have_count");
   if (have_count) {
-    have_count.html('<%= current_user.haves.cout %>')
+    have_count.html('<%= current_user.haves.count %>')
   }
   var want_count = $("#want_count");
   if (want_count) {
-    have_count.html('<%= current_user.wants.cout %>')
+    want_count.html('<%= current_user.wants.count %>')
   }
 <% end %>
