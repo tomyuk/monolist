@@ -55,4 +55,10 @@ class User < ActiveRecord::Base
   def want?(item)
     want_items.include?(item)
   end
+  
+#  def items_list
+#    list = {}
+#    items.each {|i| list[i.id] = i}
+#    list.values
+#  end
 end
