@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  unless Rails.enviroment == "production"
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  end
   root 'welcome#index'
 
   get 'ranking/have'

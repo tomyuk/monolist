@@ -1,3 +1,4 @@
+unless Rails.enviroment == "production"
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -31,4 +32,5 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+end
 end
