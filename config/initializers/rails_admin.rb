@@ -1,4 +1,4 @@
-unless Rails.enviroment == "production"
+unless Rails.env == "production"
 RailsAdmin.config do |config|
 
   ### Popular gems integration
