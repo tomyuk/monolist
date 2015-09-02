@@ -16,8 +16,8 @@
 
         <div class="detail">
           <div class="title">
-            <span class="label label-info">
-              <%= index + 1 %>位
+            <span class="ranking-label label label-info">
+              <%= index + 1 %>位 (<%= @counts[index] %>)
             </span>
             <%= link_to item.title , item %>
           </div>
