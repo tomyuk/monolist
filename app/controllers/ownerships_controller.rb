@@ -13,6 +13,9 @@ class OwnershipsController < ApplicationController
         end
 
         amazon_item           = response.items.first
+        unless amazon_item
+          return render js: "alert('ASIN #{params[:asin]} が見つかりませんでした。"
+        end
         @item.title           = amazon_item.get('ItemAttributes/Title')
         @item.small_image     = amazon_item.get("SmallImage/URL")
         @item.medium_image    = amazon_item.get("MediumImage/URL")
@@ -26,9 +29,9 @@ class OwnershipsController < ApplicationController
     end
 
     if params[:type] == "Have"
-      @ownership = current_user.have @item
+      current_user.have @item
     elsif params[:type] == "Want"
-      @ownership = current_user.want @item
+      current_user.want @item
     end
   end
 
