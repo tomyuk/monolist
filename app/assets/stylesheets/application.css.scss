@@ -17,3 +17,15 @@
 @import "variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@mixin p-base {
+  background-color: gray;
+  color: blue;
+}
+
+$myblue: #3bbfce;
+
+p {
+  color: $myblue;
+  @include p-base;
+}

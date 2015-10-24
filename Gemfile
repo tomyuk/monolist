@@ -58,3 +58,5 @@ group :development, :test do
   gem 'rails-erd'
   gem 'rails_admin'
 end
+
+gem 'kaminari'
