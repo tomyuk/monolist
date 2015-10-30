@@ -7,7 +7,7 @@ class OwnershipsController < ApplicationController
       # itemsテーブルに存在しない場合はAmazonのデータを登録する。
       if @item.new_record?
         begin
-          response = Amazon::Ecs.item_lookup(params[:asin] , response_group: 'Medium' , country: 'jp')
+          response = Amazon::Ecs.item_lookup(params[:asin], response_group: 'Medium', country: 'jp')
         rescue Amazon::RequestError => e
           return render :js => "alert('Amazonとの通信エラーが発生しました。[#{e.message}]')"
         end
