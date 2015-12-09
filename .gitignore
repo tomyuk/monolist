@@ -34,3 +34,4 @@ bower.json
 .DS_Store
 
 /spring
+/app/assets/stylesheets/.sass-cache
