@@ -35,3 +35,8 @@ bower.json
 
 /spring
 /app/assets/stylesheets/.sass-cache
+
+*~
+.*~
+.\#*
+

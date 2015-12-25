@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class OwnershipsController < ApplicationController
   before_action :logged_in_user
 
@@ -27,11 +28,11 @@ class OwnershipsController < ApplicationController
       @item.save!
     end
     
-      if params[:type] == "Have"
-        current_user.have(@item)
-      elsif params[:type] == "Want"
-        current_user.want(@item)
-      end
+    if params[:type] == "Have"
+      current_user.have(@item)
+    elsif params[:type] == "Want"
+      current_user.want(@item)
+    end
       
   end
   
