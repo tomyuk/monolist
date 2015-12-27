@@ -19,13 +19,15 @@
 @import "bootstrap";
 
 @mixin p-base {
-  background-color: gray;
+/*
+  background-color: white;
   color: blue;
+*/
 }
 
-$myblue: #3bbfce;
+$title-color: #3b9e3e;
 
 p {
-  color: $myblue;
+  color: $title-color;
   @include p-base;
 }

@@ -1,4 +1,8 @@
 <div class="container">
+  <div>
+    <%= paginate @items %>
+  </div>
+
   <div class="container-inner inner-default clearfix">
     <% items.each do |item| %>
       <div class="item-box">
