@@ -1,7 +1,3 @@
-<% content_for:head do %>
-  <title><%= user.name %> - Monolist</title>
-  <meta name="description" content="<%= user.name %>のモノページ。<%= user.name %>の欲しいモノ、持ってるモノを表示しています。">
-<% end %>
 <div class="user-profile">
   <div class="icon">
     <%= gravatar_for user, size: 100 %>
@@ -14,25 +10,25 @@
       <li>
         <div class="status-label">FOLLOWING</div>
         <div class="status-value">
-          <%= user.following_users.count if logged_in? %>
+          <%= user.following_relationships.count %>
         </div>
       </li>
       <li>
         <div class="status-label">FOLLOWERS</div>
         <div id="followers" class="status-value">
-          <%= user.followed_users.count if logged_in? %>
+          <%= user.followed_relationships.count %>
         </div>
       </li>
       <li>
         <div class="status-label">WANT</div>
         <div id="want_count" class="status-value">
-          <%= current_user.want_items.count if logged_in? %>
+          <%= user.wants.count %>
         </div>
       </li>
       <li>
         <div class="status-label">HAVE</div>
         <div id="have_count" class="status-value">
-          <%= current_user.have_items.count if logged_in? %>
+          <%= user.haves.count %>
         </div>
       </li>
     </ul>

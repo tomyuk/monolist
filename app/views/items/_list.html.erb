@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="row container-inner inner-default">
+    <div class="col-sm-6">
+      <%= paginate items %>
+    </div>
+  </div>
   <div class="container-inner inner-default clearfix">
     <% items.each do |item| %>
       <div class="item-box">

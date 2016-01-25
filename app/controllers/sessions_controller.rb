@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       flash[:info] = "logged in as #{@user.name}"
+      return redirect_to session[:forwarding_url] if session[:forwarding_url].present?
       redirect_to @user
     else
       flash[:danger] = 'invalid email/password combination'
